@@ -1,7 +1,7 @@
 import os
 
 
-def append_text(name, text):
+def append_text(name: str, text: str) -> None:
     if os.path.isfile(name):
         with open(name, 'a') as file:
             if file.tell() > 0:
@@ -11,3 +11,4 @@ def append_text(name, text):
 
     else:
         print(f'Файл {name} не существует')
+
